@@ -6,4 +6,4 @@ version: "0"
 dependencies:
   - name: trino
     repository: https://trinodb.github.io/charts/
-    version: "*.*.*"
+    version: "0.34.0"
