@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v2.0.0...v2.0.1) (2026-11-20)
+
+
+### 🔥 Bug Fixes
+
+* use kubernetes_service_v1 data source ([#8](https://github.com/gersonrs/modern-gitops-stack-module-trino/issues/8)) ([34521f8](https://github.com/gersonrs/modern-gitops-stack-module-trino/commit/34521f842d11bf6fddafa8120f14384945be48ca))
+
 ## [2.0.0](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v1.1.1...v2.0.0) (2026-11-20)
 
 
