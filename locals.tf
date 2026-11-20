@@ -58,7 +58,7 @@ locals {
         }]
       }
 
-      additionalCatalogs = {
+      catalogs = {
         "pinot" = <<-EOT
           connector.name=pinot
           pinot.controller-urls=${var.pinot_dns}
