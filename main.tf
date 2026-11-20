@@ -112,7 +112,7 @@ resource "null_resource" "this" {
 }
 
 
-data "kubernetes_service" "trino" {
+data "kubernetes_service_v1" "trino" {
   metadata {
     name      = "trino"
     namespace = var.namespace
