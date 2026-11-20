@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v1.1.1...v2.0.0) (2026-11-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* provider major bumps and a stricter Terraform baseline; consumers must run `terraform init -upgrade`.
+
+### 🚀 New Features
+
+* add namespace_labels variable to all modules ([d84431a](https://github.com/gersonrs/modern-gitops-stack-module-trino/commit/d84431a4d6ea9d23c396c06043b785db9e19f06d))
+* upgrade charts, providers and Terraform baseline ([#5](https://github.com/gersonrs/modern-gitops-stack-module-trino/issues/5)) ([5b27d9d](https://github.com/gersonrs/modern-gitops-stack-module-trino/commit/5b27d9d41325e9358977b6552f6d0b629e3839f2))
+
+
+### 📦 CI Improvements
+
+* run release-please with GITHUB_TOKEN ([#6](https://github.com/gersonrs/modern-gitops-stack-module-trino/issues/6)) ([40367f4](https://github.com/gersonrs/modern-gitops-stack-module-trino/commit/40367f455314c15fcbce5421223153526ca055f5))
+
 ## [1.1.1](https://github.com/GersonRS/modern-gitops-stack-module-trino/compare/v1.1.0...v1.1.1) (2025-02-08)
 
 
