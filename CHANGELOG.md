@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v2.0.1...v3.0.0) (2026-11-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* the ingress object and its trino-ingres-tls secret are gone; the host is now served by the Istio gateway, so callers must pass the gateway values and stop relying on the Traefik ingress class.
+
+### 🚀 New Features
+
+* expose Trino through the Istio gateway instead of Traefik ([#11](https://github.com/gersonrs/modern-gitops-stack-module-trino/issues/11)) ([5e17e5a](https://github.com/gersonrs/modern-gitops-stack-module-trino/commit/5e17e5ad3aa49026775eaa5d0d746729c554fb98))
+
 ## [2.0.1](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v2.0.0...v2.0.1) (2026-11-20)
 
 
