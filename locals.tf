@@ -13,6 +13,11 @@ locals {
           maxHeapSize = "3G"
         }
       }
+      # The Istio gateway forwards client requests with X-Forwarded-For, which
+      # Trino rejects unless process-forwarded is enabled.
+      additionalConfigProperties = [
+        "http-server.process-forwarded=true",
+      ]
       server = {
         workers = 1
         config = {
