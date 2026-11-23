@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v3.0.0...v3.0.1) (2026-11-23)
+
+
+### 🔥 Bug Fixes
+
+* accept X-Forwarded-For from the Istio gateway ([#13](https://github.com/gersonrs/modern-gitops-stack-module-trino/issues/13)) ([57c986f](https://github.com/gersonrs/modern-gitops-stack-module-trino/commit/57c986f310bd843daa381c2324da201fc63e68b3))
+
 ## [3.0.0](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v2.0.1...v3.0.0) (2026-11-22)
 
 
