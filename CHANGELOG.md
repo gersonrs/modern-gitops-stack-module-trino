@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v3.0.1...v3.0.2) (2026-11-24)
+
+
+### 📚 Documentation
+
+* add usage and dependencies to the module documentation ([#15](https://github.com/gersonrs/modern-gitops-stack-module-trino/issues/15)) ([9e09c5d](https://github.com/gersonrs/modern-gitops-stack-module-trino/commit/9e09c5d47db61f43ac157de19e2d269f604d5b80))
+
 ## [3.0.1](https://github.com/gersonrs/modern-gitops-stack-module-trino/compare/v3.0.0...v3.0.1) (2026-11-23)
 
 
