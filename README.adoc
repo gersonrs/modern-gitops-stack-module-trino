@@ -1,4 +1,61 @@
 = modern-gitops-stack-module-trino
+// Document attributes to replace along the document
+:trino-chart-version: 0.34.0
+:original-repo-url: https://github.com/trinodb/charts
+
+A https://modern-gitops-stack.io[Modern GitOps Stack] module to deploy Trino, the distributed SQL query engine used to query Pinot, PostgreSQL and object storage.
+
+The trino chart used by this module is shipped in this repository as well, in order to avoid any unwanted behaviors caused by unsupported versions.
+
+[cols="1,1,1",options="autowidth,header"]
+|===
+|Current Chart Version |Original Repository |Default Values
+|*0.34.0* |https://github.com/trinodb/charts/tree/main/charts/trino[trino] |https://artifacthub.io/packages/helm/trino/trino/0.34.0?modal=values[`values.yaml`]
+|===
+
+== Usage
+
+This module can be declared by adding the following block to your Terraform configuration:
+
+[source,terraform]
+----
+module "trino" {
+  source = "git::https://github.com/GersonRS/modern-gitops-stack-module-trino.git?ref=<RELEASE>"
+
+  cluster_name   = local.cluster_name
+  base_domain    = local.base_domain
+  subdomain      = local.subdomain
+  cluster_issuer = local.cluster_issuer
+  app_autosync   = local.app_autosync
+  storage        = { ... }  # MinIO bucket
+  database       = { ... }  # PostgreSQL connection
+  pinot_dns      = module.pinot.dns
+
+  dependency_ids = {
+    pinot      = module.pinot.id
+    postgresql = module.postgresql.id
+    minio      = module.minio.id
+  }
+}
+----
+
+The application is deployed to the `processing` namespace.
+
+== Technical Reference
+
+=== Dependencies
+
+==== `module.pinot.id`
+
+Trino exposes a Pinot catalog.
+
+==== `module.postgresql.id`
+
+Trino exposes a PostgreSQL catalog.
+
+==== `module.minio.id`
+
+The Hive catalog points at the MinIO warehouse.
 
 // BEGIN_TF_DOCS
 === Requirements
